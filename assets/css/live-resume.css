@@ -134,7 +134,7 @@ sup {
   top: -.5em; }
 
 a {
-  color: #0067f6;
+  color: #e3e5e7;
   text-decoration: none;
   background-color: transparent; }
   a:hover {
@@ -194,6 +194,20 @@ button {
 button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color; }
+
+
+  .site-identity {
+    position: relative;
+    padding: initial;
+    float: left;
+    margin: auto
+  }
+  .site-identity img {
+    max-width: 46px;
+    float: right;
+    margin: 0px -27px 0 0;
+  }
+  
 
 input,
 button,
@@ -7620,7 +7634,7 @@ header {
       padding-top: 20px;
       padding-right: 20px; } }
       .menu{
-      padding-top: 30px;
+      padding-top: 24px;
       padding-right: 70px;
       padding-left: 300px;
       }
@@ -7897,21 +7911,39 @@ main {
       @media (max-width: 575px) {
         main .portfolio-wrapper .portfolio-item {
           width: 100%; } }
-      main .portfolio-wrapper .portfolio-item-img {
+          main .portfolio-wrapper .portfolio-item-img {
+            max-height: 300px;
+            max-width: 100%; }
+      main .portfolio-wrapper .portfolio-item-img-1 {
         max-height: 198px;
         max-width: 100%; }
+       
+      main .portfolio-wrapper .portfolio-item-img-2 {
+        max-height: 300px;
+        max-width: 100%;}
+      main .portfolio-wrapper .portfolio-item-img-3 {
+        max-height: -webkit-fill-available;
+        padding-inline-end: 40px }
+
+
       main .portfolio-wrapper .portfolio-item-details {
         padding: 22px 26px;
         background-color: rgba(0, 0, 0, 0.42);
         color: #ffffff; }
       main .portfolio-wrapper .portfolio-item-title {
-        font-size: 10px;
+        font-size: 16px;
         font-weight: 700;
-        line-height: 1;
+        line-height: 250px;
+        text-align: center;
         margin-bottom: 5px; }
+      
+       
+
       main .portfolio-wrapper .portfolio-item-description {
-        font-size: 10px;
-        line-height: 1;
+        font-size: 13px;
+        line-height: 20px;
+        text-align: center;
+        
         margin-bottom: 0; }
   main .blog-section {
     margin-bottom: 51px; }
@@ -8174,35 +8206,33 @@ main {
   height: 100vh;
   position: relative;
   color: #fff;
+  
+
 }
 
 .bg-image {
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
-  /*#filter: grayscale(30%);*/
+  background-size: cover; 
   filter: sepia(2);
-  -webkit-filter: sepia(0.2);
- /*# background-position: center center;*/
+  -webkit-filter: sepia(0.2); 
+  transition: all .2s ease;
 }
 
 @media (max-width: 1024px) {
   .bg-image {
-    background-attachment: scroll;
+    background-position: -160px 40px;
   }
 }
 
-/*
+
 
 .content {
- 
-  width: 89vw;
-  height: 0vh;
- 
   display: flex;
   align-items: center;
   justify-content: flex-end;
   flex-direction: row;
+  max-width: 350px;
 
 }
 .slider-wrapper {
@@ -8212,13 +8242,16 @@ main {
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+  justify-content: start;
 }
 .slider{
   height: 50px;
-  padding-left:15px;
   overflow: hidden;
 }
+
+
 .slider div {
   color:#fff;
   height: 50px;
@@ -8253,13 +8286,11 @@ main {
 }
 
 .row {
-
-  width: 85vw;
-  height: 40vh;
   display: -ms-flexbox;
   
   justify-content: flex-end;
   flex-direction: row;
-  margin-left: 200px;
+  /* margin-left: 200px; */
 }
 
+ 

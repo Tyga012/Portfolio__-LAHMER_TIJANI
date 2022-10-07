@@ -4,15 +4,19 @@ $('[data-toggle="collapsible-nav"]').on('click', function(e){
 });
 
 $(document).ready(function(){
-    if(window.innerWidth >= 992) {
-        $('#collapsible-nav').addClass('show');  //Show navigation menu in bigger screens by default.
-    } else {
-        $('#collapsible-nav').removeClass('show');
-    }
 
-    if ($('.hover-box').length) {
-        setHoverBoxPerspective();
-    }
+    $( window ).resize(function() {
+        if(window.innerWidth >= 992) {
+            $('#collapsible-nav').addClass('show');  
+            //Show navigation menu in bigger screens by default.
+        } else {
+            $('#collapsible-nav').removeClass('show');
+        }
+      });
+
+    // if ($('.hover-box').length) {
+    //     setHoverBoxPerspective();
+    // }
 });
 
 $(window).resize(
