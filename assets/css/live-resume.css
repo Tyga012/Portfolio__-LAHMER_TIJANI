@@ -4,6 +4,7 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -58,7 +59,12 @@ body {
   line-height: 1.5;
   color: #000000;
   text-align: left;
-  background-color: #f3f3f3; }
+  background-color: #f3f3f3;
+ }
+
+ .page__blog{
+  overflow: hidden;
+ }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important; }
@@ -197,10 +203,8 @@ button:focus {
 
 
   .site-identity {
-    position: relative;
-    padding: initial;
-    float: left;
-    margin: auto
+    position: absolute;    
+    right: 97%;
   }
   .site-identity img {
     max-width: 46px;
@@ -476,6 +480,9 @@ pre {
   @media (min-width: 1200px) {
     .container {
       max-width: 1140px; } }
+    @media (min-width: 1400px) {
+    .container {
+      max-width: 1320px; } }
 
 .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
   width: 100%;
@@ -499,6 +506,10 @@ pre {
 @media (min-width: 1200px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl {
     max-width: 1140px; } }
+
+    @media (min-width: 1400px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl {
+    max-width: 1400px; } }
 
 .row {
   display: flex;
@@ -7617,7 +7628,7 @@ header {
   display: flex;
   align-items: center; 
   justify-content: flex-end;
-  padding: 12px;}
+  padding: 18px 12px;}
   @media (max-width: 991px) {
     header {
       position: fixed;
@@ -7634,7 +7645,7 @@ header {
       padding-top: 20px;
       padding-right: 20px; } }
       .menu{
-      padding-top: 24px;
+      /* padding-top: 24px; */
       padding-right: 70px;
       padding-left: 300px;
       }
@@ -8200,17 +8211,82 @@ main {
   to {
     transform: rotate3d(0, 1, 0, 104deg); } }
 
-/*# sourceMappingURL=live-resume.css.map */
+
 
 .hero {
-  height: 100vh;
+  /* height: 100vh; */
   position: relative;
   color: #fff;
-  
+}
+.coda-pop-up-btn{
+  color:white;
+}
+
+.page__blog .image__fixed {
+    background: url('../images/background_profil.jpg');
+    background-position: 0 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    z-index: 0;
+    position: fixed;
+    transition: all .2s ease;
+}
+
+@media screen and (max-width: 490px) {
+
+  .page__blog .image__fixed {      
+      background-position: 23% 40px;     
+  }
+}
+
+.first__col{
+  min-width: 100%;
+}
+
+.second__col{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(0, 0);
+    background: rgba(0,0,0,.5);
+    bottom: 0;
+    align-items: center;
+    z-index: 0;
+    color: white; 
+    padding: 0;
+}
+.second__col .col{
+  padding: 0 40px;
+}
+
+.btn-menu-toggle{
+  padding: 0;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.btn-menu-toggle:hover svg{
+ fill: #004cb6;
+}
+
+.btn-menu-toggle svg{
+  width: 22px;
+  fill: #00204d;
+}
+
+ 
+
+.page__resume .site-identity{
+  position: relative;
+  right: inherit;
 
 }
 
-.bg-image {
+
+/* .bg-image {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover; 
@@ -8223,7 +8299,7 @@ main {
   .bg-image {
     background-position: -160px 40px;
   }
-}
+} */
 
 
 
@@ -8279,7 +8355,6 @@ main {
   71% {margin-top:0px;}
   100% {margin-top:0px;}
 }
-
 
 .vh100 {
   height: 100vh;
